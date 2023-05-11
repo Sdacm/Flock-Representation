@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flock</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="boid.js"></script>
+	<script src="vector.js"></script>
+</head>
+<body>
+    <h2>Flocking Simulation</h2>
+    <p>Número de Boids (agem consoante as regras do <a href="https://www.red3d.com/cwr/boids/">modelo de Craig Reynolds</a>)</p>
+    <input type="number" id="numberOfBoids" value="100" onchange="recreateFlock()">
+    <p>Número de Predadores Vermelhos (perseguem os Boids Brancos, fogem dos Predadores Amarelos)</p>
+    <input type="number" id="numberOfReds" value="0" onchange="recreateFlock()">
+    <p>Número de Predadores Amarelos (perseguem e comem os Predadores Vermelhos, de resto agindo como os Boids Brancos)</p>
+    <input type="number" id="numberOfYellows" value="0" onchange="recreateFlock()">
+    <br/><br/>
+	<canvas>
+		Your browser does not support the canvas element.
+	</canvas>
+	<div class="slidecontainer">
+		<p>Separation Value: <span id="separationValue"></span></p>
+  		<input type="range" min="0" max="2" value="1" steps="0.1" onchange="separationChange(this.value)" class="slider" id="separationSlider"/>
+  		<p>Alignment Value: <span id="alignmentValue"></span></p>
+  		<input type="range" min="0" max="2" value="1" steps="0.1" onchange="alignmentChange(this.value)" class="slider" id="alignmentSlider"/>
+  		<p>Cohesion Value: <span id="cohesionValue"></span></p>
+  		<input type="range" min="0" max="2" value="1" steps="0.1" onchange="cohesionChange(this.value)" class="slider" id="cohesionSlider"/>
+	</div>
+	<script src="flock.js"></script>
+</body>
+</html>
