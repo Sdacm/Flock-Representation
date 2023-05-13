@@ -12,7 +12,7 @@ The Vector class was adapted from an existing class and can be found at the "vec
 The CSS can be found at the "style.css" file.
 The project report can be found at the "Flock.pdf" file (portuguese only).
 
-Project inspired by The Coding Train (https://www.youtube.com/watch?v=mhjuuHl6qHM&t=1781s).
+Project inspired by The Coding Train (https://www.youtube.com/watch?v=mhjuuHl6qHM).
 
 Salvador Meira
 salvador-3255@hotmail.com
